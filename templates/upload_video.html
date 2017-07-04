@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% block titulo %}Subir Vídeo{% endblock titulo%}
+
+{% block contenido %}
+<div class="content">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-2">
+      <form method="post" action="." enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-primary">Subir</button>
+      </form>
+      <p><a href="{% url 'index' %}">Regresar al inicio</a></p>
+    </div>
+  </div>
+</div>
+{% endblock contenido %}

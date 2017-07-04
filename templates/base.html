@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load staticfiles %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>{% block titulo %} Inicio {% endblock titulo %}</title>
+</head>
+{% block header %}
+  {% include "header.html" %}
+{% endblock header %}
+<body>
+{% block contenido %}
+{% endblock contenido %}
+
+{% block footer %}
+  {% include "footer.html" %}
+{% endblock footer %}
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+<style media="screen">
+  body{
+    background-color: rgba(201, 53, 45, 0.8);
+    margin-top: 20px;
+  }
+  .content{
+    margin-top: 100px;
+  }
+</style>
+</body>
+</html>

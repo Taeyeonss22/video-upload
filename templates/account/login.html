@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Login {% endblock titulo %}
+
+{% block contenido %}
+<div class="content">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1>Login</h1>
+      <form action="." method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock contenido %}

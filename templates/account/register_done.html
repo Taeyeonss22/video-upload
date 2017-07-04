@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Gracias por registrarte {% endblock titulo %}
+
+{% block contenido %}
+<div class="content">
+  <div class="row">
+    <div class="col-sm-8">
+      <h1>Gracias por registrarte <strong>{{usuario.first_name}}</strong> </h1>
+      <p>Tu cuenta ha sido creada satisfactoriamente. Ahora puedes <a href="{% url 'login' %}">Entrar</a> </p>
+    </div>
+  </div>
+</div>
+{% endblock contenido %}

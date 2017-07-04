@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Registrate {% endblock titulo %}
+
+{% block contenido %}
+  <div class="content">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <form action="." method="post">
+          {% csrf_token %}
+          {{user_form.as_p}}
+          <button class="btn btn-primary" type="submit">Registrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock contenido %}
